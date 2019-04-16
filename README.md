@@ -43,4 +43,4 @@ bootloader简单例子。
 - example1：简单完整例子
 - example2：链接脚本写法
 - example3：嵌入式程序内链接脚本的写法
-
+- example4：u-boot启动内核的步骤
