@@ -60,7 +60,7 @@ linux内核为大程序，需要运行在SDRAM内，故BootLoader需要初始化
 
 可选的，用于调试。
 
-BootLoader初始化一个串口后，通过传递“console=”给内核，告诉内核可以使用哪个串口。参考文档《Documentation/kernel-parameters.txt》。
+BootLoader初始化一个串口后，通过传递“console=”给内核，告诉内核可以使用哪个串口。参考文档《Documentation/admin-guide/kernel-parameters.txt》。
 
 ### 1.3 检测内核类型
 
