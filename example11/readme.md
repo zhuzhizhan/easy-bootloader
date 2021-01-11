@@ -54,3 +54,12 @@ s60=00000000 s61=00000000 d30=0000000000000000
 s62=00000000 s63=00000000 d31=0000000000000000
 FPSCR: 00000000
 
+
+
+make:
+arm-none-eabi-as -o startup.o startup.s
+arm-none-eabi-ld -T linkscript.ld -o better-hang.elf startup.o
+arm-none-eabi-objcopy -O binary better-hang.elf better-hang.bin
+
+qemu:
+qemu-system-arm -M vexpress-a9 -m 32M -no-reboot -nographic -monitor telnet:127.0.0.1:1234,server,nowait -kernel better-hang.bin
